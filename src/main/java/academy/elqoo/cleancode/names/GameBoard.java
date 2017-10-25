@@ -5,10 +5,10 @@ import java.util.List;
 
 public class GameBoard {
 
-    public static void clone(List<Ship> source, List<Ship> destination){ // clones the data from one list of ships to another
-        for (Ship sourceShip : source) {
-	  for (Ship destinationShip : destination) {
-	      destinationShip.clone(sourceShip);
+    public static void clone(List<A> a1, List<A> a2){ // clones the data from one list of ships to another
+        for (A sourceA : a1) {
+	  for (A destinationA : a2) {
+	      destinationA.clone(sourceA);
 	  }
         }
     }
