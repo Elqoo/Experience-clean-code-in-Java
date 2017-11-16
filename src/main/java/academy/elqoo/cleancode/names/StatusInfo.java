@@ -1,7 +1,7 @@
 package academy.elqoo.cleancode.names;
 
 
-public enum Status {
+public enum StatusInfo {
 
     ATTACKING,
     DEAD,

@@ -16,7 +16,7 @@ public class ATest {
         A host = A.woThisIsACoolCreateMethod(10, 20);
         A enemy = A.woThisIsACoolCreateMethod(10, 10);
         host.c(enemy);
-        assertThat(enemy.getStatus(), equalTo(Status.ALIVE));
+        assertThat(enemy.getStatusInfo(), equalTo(StatusInfo.ALIVE));
     }
 
     @Test
