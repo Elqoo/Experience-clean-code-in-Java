@@ -23,7 +23,7 @@ public class ATest {
     public void b() {
         List<A> a = bringToLive(5);
         List<A> a1 = bringToLive(5);
-        ABoard.clone(a, a1);
+        ABoard.viSmartCopy(a, a1);
         assertThat(a.get(3).getHp(), equalTo(a1.get(1).getHp()));
     }
 
