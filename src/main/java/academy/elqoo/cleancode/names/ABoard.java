@@ -3,9 +3,9 @@ package academy.elqoo.cleancode.names;
 
 import java.util.List;
 
-public class GameBoard {
+public class ABoard {
 
-    public static void clone(List<A> a1, List<A> a2){ // clones the data from one list of ships to another
+    public static void viSmartCopy(List<A> a1, List<A> a2){
         for (A sourceA : a1) {
 	  for (A destinationA : a2) {
 	      destinationA.clone(sourceA);

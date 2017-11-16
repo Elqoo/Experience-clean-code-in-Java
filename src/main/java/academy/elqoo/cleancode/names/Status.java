@@ -1,7 +1,7 @@
 package academy.elqoo.cleancode.names;
 
 
-public enum ShipStatus {
+public enum Status {
 
     ATTACKING,
     DEAD,

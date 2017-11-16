@@ -16,14 +16,14 @@ public class ATest {
         A host = A.woThisIsACoolCreateMethod(10, 20);
         A enemy = A.woThisIsACoolCreateMethod(10, 10);
         host.c(enemy);
-        assertThat(enemy.getStatus(), equalTo(ShipStatus.ALIVE));
+        assertThat(enemy.getStatus(), equalTo(Status.ALIVE));
     }
 
     @Test
     public void b() {
         List<A> a = bringToLive(5);
         List<A> a1 = bringToLive(5);
-        GameBoard.clone(a, a1);
+        ABoard.clone(a, a1);
         assertThat(a.get(3).getHp(), equalTo(a1.get(1).getHp()));
     }
 
