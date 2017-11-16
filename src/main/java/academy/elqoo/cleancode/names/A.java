@@ -6,7 +6,7 @@ import java.util.Random;
 // Represents a ship in our game
 public class A implements IGameObject {
 
-    private Status status;
+    private StatusInfo statusInfo;
 
     private int hp; // indicates how many hitpoints the ship has
 
@@ -25,7 +25,7 @@ public class A implements IGameObject {
     public A(int hp, int r_b) {
         this.hp = hp;
         this.r_b = r_b;
-        this.status = Status.ALIVE;
+        this.statusInfo = StatusInfo.ALIVE;
     }
 
     public int getHp() {
@@ -38,11 +38,11 @@ public class A implements IGameObject {
 
     public void destroy(){  // destroys this A by reducing the hp points to zero
         this.hp = 0;
-        this.status = Status.DEAD;
+        this.statusInfo = StatusInfo.DEAD;
     }
 
-    public Status getStaus() {
-        return status;
+    public StatusInfo getStaus() {
+        return statusInfo;
     }
 
     public boolean isDestroyed(){ // checks if this A is still alive
@@ -58,18 +58,18 @@ public class A implements IGameObject {
     }
 
     public void c(A enemy){ // attacks an enemy ship
-        this.status = Status.ATTACKING;
+        this.statusInfo = StatusInfo.ATTACKING;
         enemy.boom(this);
-        this.status = Status.ALIVE;
+        this.statusInfo = StatusInfo.ALIVE;
     }
 
-    public Status getStatus() {
-         return status;
+    public StatusInfo getStatusInfo() {
+         return statusInfo;
     }
 
     public void clone(A a){
         this.hp = a.getHp();
         this.r_b = a.getR_b();
-        this.status = a.getStatus();
+        this.statusInfo = a.getStatusInfo();
     }
 }
