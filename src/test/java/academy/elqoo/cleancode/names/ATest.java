@@ -21,13 +21,13 @@ public class ATest {
 
     @Test
     public void b() {
-        List<A> a = bringToLive(5);
-        List<A> a1 = bringToLive(5);
+        List<A> a = goPlay(5);
+        List<A> a1 = goPlay(5);
         ABoard.viSmartCopy(a, a1);
         assertThat(a.get(3).getHp(), equalTo(a1.get(1).getHp()));
     }
 
-    private List<A> bringToLive(int amount){
+    private List<A> goPlay(int amount){
         return Stream.iterate(A.randomizer(), a -> A.randomizer())
 	      .limit(amount)
 	      .collect(toList());
