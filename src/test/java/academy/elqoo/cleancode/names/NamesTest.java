@@ -1,5 +1,8 @@
 package academy.elqoo.cleancode.names;
 
+import academy.elqoo.cleancode.names.shouldrevealintent.A;
+import academy.elqoo.cleancode.names.shouldrevealintent.ABoard;
+import academy.elqoo.cleancode.names.shouldrevealintent.StatusInfo;
 import org.junit.Test;
 
 import java.util.List;
@@ -9,7 +12,7 @@ import static java.util.stream.Collectors.toList;
 import static org.hamcrest.CoreMatchers.equalTo;
 import static org.junit.Assert.assertThat;
 
-public class ATest {
+public class NamesTest {
 
     @Test
     public void a() {

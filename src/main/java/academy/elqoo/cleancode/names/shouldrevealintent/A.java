@@ -1,4 +1,4 @@
-package academy.elqoo.cleancode.names;
+package academy.elqoo.cleancode.names.shouldrevealintent;
 
 
 import java.util.Random;
