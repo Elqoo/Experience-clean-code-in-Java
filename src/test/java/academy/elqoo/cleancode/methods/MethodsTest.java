@@ -3,11 +3,15 @@ package academy.elqoo.cleancode.methods;
 import academy.elqoo.cleancode.methods.badswitch.Order;
 import academy.elqoo.cleancode.methods.badswitch.OrderService;
 import academy.elqoo.cleancode.methods.badswitch.OrderStatus;
+import academy.elqoo.cleancode.methods.error.Error;
 import org.junit.Test;
 
-import static academy.elqoo.cleancode.methods.badswitch.OrderStatus.PENDING;
+import static academy.elqoo.cleancode.methods.badswitch.OrderStatus.*;
+import static academy.elqoo.cleancode.methods.badswitch.OrderStatus.COMPLETED;
 import static org.hamcrest.CoreMatchers.equalTo;
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertThat;
+import static org.junit.Assert.assertTrue;
 
 public class MethodsTest {
 
@@ -51,6 +55,12 @@ public class MethodsTest {
         // substraction
         result = Arguments.substractNumberFrom(1, 0);
         assertEquals(-1, result);
+    }
+
+    @Test
+    public void shouldNotUseTheErrorsObject(){
+        Error error = new Errors().doSomething();
+        assertEquals(Error.READ_TIMEOUT, error);
     }
 
 }
