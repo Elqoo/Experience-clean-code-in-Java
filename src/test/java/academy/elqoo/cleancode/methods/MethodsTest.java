@@ -3,15 +3,12 @@ package academy.elqoo.cleancode.methods;
 import academy.elqoo.cleancode.methods.badswitch.Order;
 import academy.elqoo.cleancode.methods.badswitch.OrderService;
 import academy.elqoo.cleancode.methods.badswitch.OrderStatus;
-import academy.elqoo.cleancode.methods.error.Error;
+import academy.elqoo.cleancode.methods.error.ReadTimeoutException;
 import org.junit.Test;
 
-import static academy.elqoo.cleancode.methods.badswitch.OrderStatus.*;
-import static academy.elqoo.cleancode.methods.badswitch.OrderStatus.COMPLETED;
+import static academy.elqoo.cleancode.methods.badswitch.OrderStatus.PENDING;
 import static org.hamcrest.CoreMatchers.equalTo;
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertThat;
-import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.*;
 
 public class MethodsTest {
 
@@ -59,8 +56,11 @@ public class MethodsTest {
 
     @Test
     public void shouldNotUseTheErrorsObject(){
-        Error error = new Errors().doSomething();
-        assertEquals(Error.READ_TIMEOUT, error);
+        try {
+            new Errors().doSomething();
+        } catch (ReadTimeoutException e) {
+            assertTrue(e!=null);
+        }
     }
 
 }

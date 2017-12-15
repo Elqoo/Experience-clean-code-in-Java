@@ -1,11 +1,12 @@
 package academy.elqoo.cleancode.methods;
 
-import academy.elqoo.cleancode.methods.error.Error;
+
+import academy.elqoo.cleancode.methods.error.ReadTimeoutException;
 
 public class Errors {
 
-    public Error doSomething(){
-        return Error.READ_TIMEOUT;
+    public void doSomething(){
+        throw new ReadTimeoutException();
     }
 
 }

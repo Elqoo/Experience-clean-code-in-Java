@@ -1,4 +1,4 @@
 package academy.elqoo.cleancode.methods.error;
 
-public class ReadTimeoutException extends BusinessException{
+public class DatabaseException extends BusinessException{
 }
