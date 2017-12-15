@@ -5,12 +5,9 @@ import academy.elqoo.cleancode.methods.badswitch.OrderService;
 import academy.elqoo.cleancode.methods.badswitch.OrderStatus;
 import org.junit.Test;
 
-import static academy.elqoo.cleancode.methods.badswitch.OrderStatus.*;
-import static academy.elqoo.cleancode.methods.badswitch.OrderStatus.COMPLETED;
+import static academy.elqoo.cleancode.methods.badswitch.OrderStatus.PENDING;
 import static org.hamcrest.CoreMatchers.equalTo;
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertThat;
-import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.*;
 
 public class MethodsTest {
 
