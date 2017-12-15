@@ -2,17 +2,18 @@ package academy.elqoo.cleancode.methods.badswitch;
 
 public class Order {
 
-    private OrderStatus status;
+    private OrderState state;
 
     public Order(OrderStatus status) {
-        this.status = status;
+        this.state = OrderStateFactory.create(status);
     }
 
     public OrderStatus getStatus() {
-        return status;
+        return state.getStatus();
     }
 
-    public void setStatus(OrderStatus status) {
-        this.status = status;
+    public void nextState(){
+        this.state  = state.next();
     }
+
 }
