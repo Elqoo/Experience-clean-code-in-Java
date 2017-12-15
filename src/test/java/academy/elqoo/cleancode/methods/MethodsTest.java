@@ -3,6 +3,7 @@ package academy.elqoo.cleancode.methods;
 import academy.elqoo.cleancode.methods.badswitch.Order;
 import academy.elqoo.cleancode.methods.badswitch.OrderService;
 import academy.elqoo.cleancode.methods.badswitch.OrderStatus;
+import academy.elqoo.cleancode.methods.error.Error;
 import org.junit.Test;
 
 import static academy.elqoo.cleancode.methods.badswitch.OrderStatus.PENDING;
@@ -51,6 +52,12 @@ public class MethodsTest {
         // substraction
         result = Arguments.calculate(0, 1, false);
         assertEquals(-1, result);
+    }
+
+    @Test
+    public void shouldNotUseTheErrorsObject(){
+        Error error = new Errors().doSomething();
+        assertEquals(Error.READ_TIMEOUT, error);
     }
 
 }
