@@ -48,11 +48,11 @@ public class MethodsTest {
     @Test
     public void removeFlagArgumentAndReduceArguments(){
         // first is an addition
-        int result = Arguments.calculate(0, 1, true);
+        int result = Arguments.addNumberTo(1, 0);
         assertEquals(1, result);
 
         // substraction
-        result = Arguments.calculate(0, 1, false);
+        result = Arguments.substractNumberFrom(1, 0);
         assertEquals(-1, result);
     }
 
