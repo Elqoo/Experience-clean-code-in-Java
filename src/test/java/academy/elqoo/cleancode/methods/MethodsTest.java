@@ -45,4 +45,15 @@ public class MethodsTest {
         assertEquals(OrderStatus.COMPLETED, order.getStatus());
     }
 
+    @Test
+    public void removeFlagArgumentAndReduceArguments(){
+        // first is an addition
+        int result = Arguments.calculate(0, 1, true);
+        assertEquals(1, result);
+
+        // substraction
+        result = Arguments.calculate(0, 1, false);
+        assertEquals(-1, result);
+    }
+
 }
