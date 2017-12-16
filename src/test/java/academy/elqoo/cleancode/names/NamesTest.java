@@ -5,6 +5,7 @@ import academy.elqoo.cleancode.names.shouldrevealintent.ABoard;
 import academy.elqoo.cleancode.names.shouldrevealintent.StatusInfo;
 import org.junit.Test;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Stream;
 
@@ -15,7 +16,7 @@ import static org.junit.Assert.assertThat;
 public class NamesTest {
 
     @Test
-    public void a() {
+    public void shouldRevealIntent() {
         A host = A.woThisIsACoolCreateMethod(10, 20);
         A enemy = A.woThisIsACoolCreateMethod(10, 10);
         host.c(enemy);
@@ -23,17 +24,25 @@ public class NamesTest {
     }
 
     @Test
-    public void b() {
-        List<A> a = goPlay(5);
-        List<A> a1 = goPlay(5);
-        ABoard.viSmartCopy(a, a1);
-        assertThat(a.get(3).getHp(), equalTo(a1.get(1).getHp()));
+    public void shouldDropExcessBaggage(){
+        CustomerData data = new CustomerData();
     }
 
-    private List<A> goPlay(int amount){
-        return Stream.iterate(A.randomizer(), a -> A.randomizer())
-	      .limit(amount)
-	      .collect(toList());
+    @Test
+    public void shouldBeNameYouCanSay(){
+        SSLConnection connection = new SSLConnection();
+        Wabbit whereIsTheWabbit = new Wabbit();
+    }
+
+    @Test
+    public void shouldNotContainMisinformation(){
+        List<Integer> intMap = new ArrayList<>();
+    }
+
+    @Test
+    public void shouldBePrenouncable(){
+        Wabbit wabbit = new Wabbit();
+        SSLConnection connection = new SSLConnection();
     }
 
 }
