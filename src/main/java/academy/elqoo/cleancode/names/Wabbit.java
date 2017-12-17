@@ -1,4 +1,4 @@
 package academy.elqoo.cleancode.names;
 
-public class Customer {
+public class Wabbit {
 }

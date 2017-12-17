@@ -2,12 +2,12 @@ package academy.elqoo.cleancode.names;
 
 public class Average {
 
-    public static int calculateAverage(int[] numbers){
-        int sum = 0;
-        for (int currentNumber : numbers) {
-	  sum += currentNumber;
+    public static int calculateAverage(int[] i){
+        int j = 0;
+        for (int i1 : i) {
+	  j += i1;
         }
-        return sum/numbers.length;
+        return j/i.length;
     }
 
 }
