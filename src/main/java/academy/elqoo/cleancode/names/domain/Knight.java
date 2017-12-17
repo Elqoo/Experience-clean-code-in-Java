@@ -1,4 +1,4 @@
 package academy.elqoo.cleancode.names.domain;
 
-public interface ChessThing {
+public class Knight implements Piece {
 }

@@ -1,4 +1,4 @@
 package academy.elqoo.cleancode.names;
 
-public class CustomerData {
+public class SecureNetworkConnection {
 }
