@@ -1,4 +1,4 @@
 package academy.elqoo.cleancode.names;
 
-public class SSLConnection {
+public class Rabbit {
 }
